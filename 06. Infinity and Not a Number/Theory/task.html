@@ -1,0 +1,50 @@
+<h2>Infinity and Not a Number</h2><h4>Infinity</h4>
+<ul>
+    <li><code>Double.POSITIVE_INFINITY</code> is a constant that is greater than any number.
+        <pre><code>
+double posInf = Double.POSITIVE_INFINITY;  // +Infinity
+
+double anotherPosInf = +1 / 0.0;           // it's +Infinity, not an exception
+
+double posInfAgain = anotherPosInf + 100;  // +Infinity again</code></pre>
+    </li>
+    <li>
+        <code>Double.NEGATIVE_INFINITY</code> is a constant that is less than any number.
+        <pre><code>double negInf = Double.NEGATIVE_INFINITY; // -Infinity
+
+double negInfAgain = negInf * 100;        // The result is -Infinity
+
+double anotherNegInf = -1.002 / 0.0;      // It is also -Infinity</code></pre>
+        <p>There are no errors in this case, either.</p>
+    </li>
+</ul>
+
+
+<p>In general, the operations sum and product performed on an infinity value and a regular value return infinity with
+    the same sign. For the operations subtract, remainder, and division, the result also depends on the order of
+    operands.</p>
+
+<h4>NaN</h4>
+<p><code>Double.NaN</code> is a special constant that represents an undetermined value (such as <code>0 / 0</code>).
+    It does not equal any floating-point or integer number. <code>NaN</code><strong> </strong>is an acronym for
+    <strong>Not a Number</strong>.</p>
+
+
+<pre><code>double nan = Double.NaN;         // the NaN constant
+double anotherNan = 0.0 / 0.0;   // it's the NaN, not an exception</code>
+</pre>
+
+<p>Also, this value occurs after some operations on infinity values.</p>
+
+<pre><code>double nan = Double.NEGATIVE_INFINITY + Double.POSITIVE_INFINITY;     // NaN
+double nanToo = Double.POSITIVE_INFINITY - Double.POSITIVE_INFINITY;  // Also NaN
+double notANan = Double.POSITIVE_INFINITY + Double.POSITIVE_INFINITY; // it's +Infinity!</code>
+</pre>
+
+<p>Any arithmetic operation with <code>NaN</code> produces <code>NaN</code> as the result. Actually, the results of
+    arithmetic operations do not contradict the common sense.</p>
+
+<p>The <code>float</code> type has the same special values: <code>Float.POSITIVE_INFINITY</code>,
+    <code>Float.NEGATIVE_INFINITY</code>,<code>Float.NaN</code>. The results of arithmetic operations are the same as
+    the ones we discussed above.</p>
+

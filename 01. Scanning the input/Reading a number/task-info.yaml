@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: int
+    is_correct: false
+  - text: char
+    is_correct: false
+  - text: double
+    is_correct: false
+  - text: String
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 05 Mar 2024 17:45:22 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: Reading a number
+local_check: true

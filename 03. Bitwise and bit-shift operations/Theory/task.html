@@ -1,0 +1,122 @@
+<h2>Bitwise and bit-shift operations</h2>
+<h4>Bitwise operators</h4>
+<p>There are four bitwise operators, each of which goes through all bits of an operand (the number on which the
+    operation is done) one by one (bitwise) and produces a new number as a result.</p>
+
+<ul>
+    <li><code>~</code> <strong>(bitwise NOT, inversion, complement) </strong>is a unary operator that
+        <strong>inverses</strong>the bits of the number in binary format, transforming every <code>0</code> into
+        <code>1</code> and every<code>1</code> into <code>0</code>. It also changes the sign bit of the value.
+    </li>
+    <li><code>|</code> <strong>(bitwise OR) </strong>is a binary operator that returns <code>1</code> if at least one
+        operand digit is <code>1</code>, otherwise, it returns <code>0</code>.
+    </li>
+    <li><code>&amp;</code> <strong>(bitwise AND)</strong> is a binary operator that returns <code>1</code> if both
+        operand digits are <code>1</code>, otherwise, the result is <code>0</code>.
+    </li>
+    <li><code>^</code> <strong>(bitwise XOR) </strong>is a binary operator that returns <code>1</code> if exactly one
+        operand is <code>1</code>, otherwise, it returns <code>0</code>.
+    </li>
+</ul>
+
+<div class="alert alert-primary">The listed operators can be applied to integer and boolean operands. If both
+    operands are integer, bitwise operations will be performed. If both operands are booleans, they will undergo
+    corresponding logical operations (except <code>~</code>).
+</div>
+
+<p>To see how these operators work, let's assume we have two integer numbers: <code>15</code> and <code>10</code>. The
+    first number's binary representation is <code>1111</code>, the second one is <code>1010</code>.</p>
+
+<pre><code>int first = 15;  // binary format 1111
+int second = 10; // binary format 1010
+
+int bitwiseAnd = first & second; // 1111 & 1010 = 1010, the result is 10
+int bitwiseOr = first | second;  // 1111 | 1010 = 1111, the result is 15
+int bitwiseXor = first ^ second; // 1111 ^ 1010 = 0101, the result is 5
+int bitwiseNot = ~first; // ~ 00000000000000000000000000001111 = 11111111111111111111111111110000, the result is -16
+</code></pre>
+
+<p>Now that you've got the principle, we will demonstrate how to apply them in practice in next topics, as well as in
+    our projects.</p>
+
+<h4>Bit-shift operators</h4>
+<p>In addition to bitwise operators, Java also provides <strong>bit-shift</strong> operators that can be used to move
+    bits of an integer number from one position to another.</p>
+<p>There are three bit-shift operators:</p>
+<ul>
+    <li><code>&lt;&lt;</code> is a signed bit-shift operator that shifts a bit pattern to the left by the distance
+        specified in the right operand. It fills the empty position with zeros.
+    </li>
+    <li><code>&gt;&gt;</code> is a signed bit-shift operator that shifts a bit pattern to the right by the distance
+        specified in the right operand. It fills the empty position with the values of the sign bit.
+    </li>
+    <li><code>&gt;&gt;&gt;</code> is an unsigned bit-shift operator that shifts a bit pattern to the right by the
+        distance specified in the right operand. It is almost the same as <code>&gt;&gt;</code>, but the shifted values
+        are filled up with zeros. The result of the <code>&gt;&gt;&gt;</code> operator is always positive.
+    </li>
+</ul>
+<p>The following example illustrates how to perform<strong> fast multiplication and division</strong> by two using
+    bit-shift operators.</p>
+
+<pre><code>int val = 25;   // binary: 0001 1001, decimal: 25
+
+val = val << 1; // binary: 0011 0010, decimal: 50
+val = val << 2; // binary: 1100 1000, decimal: 200
+
+int anotherVal = 14;   // binary: 1110, decimal: 14
+anotherVal = anotherVal >> 1; // binary: 0111, decimal: 7</code>
+</pre>
+
+<p>As you can see, the result of the left-shift operator is equivalent to the product of multiplication by two, and the
+    result of the right-shift operator is equivalent to that of a division by two. To summarize, when we use signed
+    bit-shift operators we perform the multiplication or division of the left operand by two depending on the right
+    operand.</p>
+
+<pre><code>int newVal = 25;
+
+newVal = newVal << 1; // 25 * 2^1 = 50
+newVal = newVal << 3; // 50 * 2^3 = 400
+newVal = newVal >> 2; // 400 / 2^2 = 100</code>
+</pre>
+
+<p>Another example is the <strong>calculation of the midpoint</strong> of an integer positive interval.</p>
+<pre><code>int left = 10;
+int right = 20;
+
+int mid = left + right >> 1; // this is 15!</code>
+</pre>
+
+<p>Of course, this magic produces the same result as <code>(left + right) / 2</code>, but the bit-shift version is often
+    considered a faster way to obtain it. Some algorithms in the Java standard library use this approach.</p>
+<p>Unlike the signed right shift (<code>&gt;&gt;</code>), the unsigned <code>&gt;&gt;&gt;</code> does not consider sign
+    bits: instead, it just shifts all the bits to the right and pads the result with zeros from the left. It means that
+    for negative numbers the result is always positive. For positive numbers, signed and unsigned right shifts have the
+    same result.</p>
+
+<pre><code>int value = -200; // binary: 11111111111111111111111100111000
+int signedShift = value >> 2; // binary: 11111111111111111111111111001110, decimal: -50
+int unsignedShift = value >>> 2; // binary: 00111111111111111111111111001110, decimal: 1073741774</code>
+</pre>
+
+<h4>Precedence of bitwise and bit-shift operations</h4>
+<p>Similar to arithmetic operators, bitwise and bit-shift operators have so-called <strong>precedence </strong>that
+    determines the order of performing and grouping operations in the expression. Operations with higher precedence are
+    performed before those with lower precedence. In the table below you will find all the operators we've discussed so
+    far ordered by their precedence in descending order. </p>
+<div class="alert alert-primary">When the operators have equal precedence, another rule is applied. It is called
+    associativity, and it determines whether the evaluation should be performed from left to right or vice versa.
+</div>
+<p>All the operators we have considered are evaluated from left to right, the way you are used to.</p>
+<p>This means that for the two expressions <code>first | second &amp; third</code> and<code>(first | second) &amp;
+    third</code> the operations will be executed in a different order and hence results may vary. If you go back to the
+    <code>left + right &gt;&gt; 1</code> example in the previous section, you can see that there we don't have to use
+    brackets like in the <code>(left + right) / 2</code> expression because addition has higher precedence than all
+    bit-shift operations. Remember these priorities when you combine arithmetic operators with bit operations. </p>
+
+<h4>Conclusion</h4>
+<p>In this topic, we've learned how to perform some operations on the bits of integer numbers and how
+    they correspond to some arithmetic operations. Bitwise operators process bits one by one according to the logical
+    operations, while bit-shift ones allow us to move the whole bit pattern left or right. The theory may seem a bit
+    complicated, however, it is essential to understand the basics to apply them in practice, as we will learn further
+    on. Now, some practice will certainly help you become more comfortable with the new information!</p>
+

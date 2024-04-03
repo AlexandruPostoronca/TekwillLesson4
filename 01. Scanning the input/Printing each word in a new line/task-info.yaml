@@ -1,0 +1,95 @@
+type: edu
+custom_name: Printing each word in a new line
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      import java.util.Scanner;
+      
+      class Main {
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              // start coding here
+          }
+      }
+    learner_created: false
+  - name: test/MainTest.java
+    visible: false
+    text: |-
+      import org.junit.After;
+      import org.junit.Before;
+      import org.junit.Test;
+      
+      import java.io.ByteArrayInputStream;
+      import java.io.ByteArrayOutputStream;
+      import java.io.PrintStream;
+      
+      import static org.junit.Assert.assertTrue;
+      
+      public class MainTest {
+          private final PrintStream standardOut = System.out;
+          private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+      
+          @Before
+          public void setUp() {
+              System.setOut(new PrintStream(outputStreamCaptor));
+          }
+      
+          @After
+          public void tearDown() {
+              System.setOut(standardOut);
+          }
+      
+          @Test
+          public void test1() {
+              simpleTest("Hello\nJava\nFuture programmer 1");
+          }
+      
+          @Test
+          public void test2() {
+              simpleTest("Hello Java Future programmer 2");
+          }
+      
+          @Test
+          public void test3() {
+              simpleTest("ala bala portocala sandala eee");
+          }
+      
+          @Test
+          public void test4() {
+              simpleTest("we will rock you now");
+          }
+      
+          @Test
+          public void test5() {
+              simpleTest("we\nwill rock\nyou\nnow");
+          }
+      
+          @Test
+          public void test6() {
+              simpleTest("This Java platform\nis adaptive");
+          }
+      
+      
+          private void simpleTest(String input) {
+              System.setIn(new ByteArrayInputStream(input.getBytes()));
+              Main.main(new String[]{""});
+      
+              String[] arr = input.split("\\s+");
+              String expected = String.join("\r\n", arr);
+      
+              String result = outputStreamCaptor.toString().trim();
+      
+              String errorMessage = "For input:\n" + input + "\nThe output must be:" +
+                                    expected + "\r\nActual output:\r\n" + result;
+      
+              String expectedRegex = String.join("($|\\r\\n|\\r|\\n)", arr);
+              assertTrue(errorMessage, result.matches(expectedRegex));
+          }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 17:39:07 UTC"
+record: -1

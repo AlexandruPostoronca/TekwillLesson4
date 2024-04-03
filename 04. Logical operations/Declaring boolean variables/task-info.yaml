@@ -1,0 +1,40 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: boolean b = ‘true';
+    is_correct: false
+  - text: boolean b = 1;
+    is_correct: false
+  - text: boolean b = 0;
+    is_correct: false
+  - text: boolean b = false;
+    is_correct: true
+  - text: boolean b = 't';
+    is_correct: false
+  - text: boolean b = True;
+    is_correct: false
+  - text: boolean b = true;
+    is_correct: true
+  - text: boolean b = ‘false';
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 18:27:32 UTC"
+record: -1
+selected_options:
+  - 3
+  - 6
+custom_name: Declaring boolean variables
+local_check: true

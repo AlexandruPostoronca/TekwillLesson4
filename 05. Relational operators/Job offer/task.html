@@ -1,0 +1,55 @@
+<h2>Job offer</h2>
+
+<p>You would like to offer a job as a Java developer for several candidates.</p>
+<p>Your company has a special rule written in Java for decision-making.</p>
+<pre><code>boolean offerAJob =
+        (knowJava && yearsOfExperienceInJava >= 1) ||
+        (knowPython && yearsOfExperienceInPython >= 3);</code>
+</pre>
+
+<p>A small explanation:</p>
+<ul>
+    <li><strong>knowJava</strong> is a boolean variable that shows whether the candidate knows Java or not.</li>
+    <li><strong>knowPython</strong> is a boolean variable that shows whether the candidate knows Python or not.</li>
+    <li>
+        <strong>yearsOfExperienceInJava</strong> is an <code>int</code> variable that shows how many years of Java
+        programming the candidate has.
+    </li>
+    <li>
+        <strong>yearsOfExperienceInPython</strong> is another <code>int</code> variable that shows how many years of
+        Python programming the candidate has.
+    </li>
+</ul>
+
+<p>The list of candidates with their skills is the following:</p>
+<ul>
+    <li>
+        <strong>John:</strong> knowJava = true; yearsOfExperienceInJava = 1; knowPython = false;
+        yearsOfExperienceInPython = 0;
+    </li>
+    <li>
+        <strong>Mary:</strong> knowJava = false; yearsOfExperienceInJava = 0; knowPython = true;
+        yearsOfExperienceInPython = 3;
+    </li>
+    <li>
+        <strong>Olivia:</strong> knowJava = true; yearsOfExperienceInJava = 0; knowPython = true;
+        yearsOfExperienceInPython = 2;
+    </li>
+    <li>
+        <strong>Alexander: </strong>knowJava = true; yearsOfExperienceInJava = 3; knowPython = true;
+        yearsOfExperienceInPython = 2;
+    </li>
+    <li>
+        <strong>Andrew:</strong> knowJava = false; yearsOfExperienceInJava = 1; knowPython = false;
+        yearsOfExperienceInPython = 1;
+    </li>
+    <li>
+        <strong>Emily:</strong> knowJava = false; yearsOfExperienceInJava = 0; knowPython = true;
+        yearsOfExperienceInPython = 2;
+    </li>
+</ul>
+<strong>Using a decision-making rule, select all candidates that will be good for your company.</strong>
+<div class="alert alert-primary">
+    Note, sometimes a candidate may have the experience, but still knows the programming language badly. In this case,
+    we consider their knowledge as false.
+</div>

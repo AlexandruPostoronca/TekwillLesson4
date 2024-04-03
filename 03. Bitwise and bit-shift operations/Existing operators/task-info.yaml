@@ -1,0 +1,38 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: === (xnor)
+    is_correct: false
+  - text: ^ (xor)
+    is_correct: true
+  - text: "~ (not)"
+    is_correct: true
+  - text: '& (and)'
+    is_correct: true
+  - text: '| (or)'
+    is_correct: true
+  - text: -> (implication)
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 18:19:52 UTC"
+record: -1
+selected_options:
+  - 1
+  - 2
+  - 3
+  - 4
+custom_name: Existing operators
+local_check: true

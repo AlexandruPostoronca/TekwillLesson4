@@ -1,0 +1,33 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: '&& is AND operator'
+    is_correct: true
+  - text: '! is NOT operator'
+    is_correct: true
+  - text: '|| is OR operator'
+    is_correct: true
+  - text: ^^ is XOR operator
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 18:26:58 UTC"
+record: -1
+selected_options:
+  - 0
+  - 1
+  - 2
+custom_name: Logical operations
+local_check: true

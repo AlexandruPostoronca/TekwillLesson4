@@ -1,0 +1,42 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: ==
+    is_correct: true
+  - text: '>'
+    is_correct: true
+  - text: <<
+    is_correct: false
+  - text: <=
+    is_correct: true
+  - text: '>>>'
+    is_correct: false
+  - text: =
+    is_correct: false
+  - text: <>
+    is_correct: false
+  - text: '!='
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 11 Mar 2024 20:14:00 UTC"
+record: -1
+selected_options:
+  - 0
+  - 1
+  - 3
+  - 7
+custom_name: Existing operators
+local_check: true

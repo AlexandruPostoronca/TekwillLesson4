@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: It is a standard keyword.
+    is_correct: false
+  - text: It is an input integer value.
+    is_correct: false
+  - text: It is an object representing the standard input.
+    is_correct: true
+  - text: It is a command that starts reading data from a file.
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      package src;
+      
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 05 Mar 2024 17:46:23 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: Understanding System.in
+local_check: true

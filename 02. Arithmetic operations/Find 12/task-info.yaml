@@ -1,0 +1,33 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: 24 / 2
+    is_correct: true
+  - text: 24 % 2
+    is_correct: false
+  - text: 25 / 2
+    is_correct: true
+  - text: 12 % 13
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 17:51:55 UTC"
+record: -1
+selected_options:
+  - 0
+  - 2
+  - 3
+custom_name: Find 12
+local_check: true

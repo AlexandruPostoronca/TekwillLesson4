@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Guest list of a hotel" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Hiring a chef" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Print strings in the reverse order" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Printing each word in a new line" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Printing strings in the same order" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Reading a number" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Reading a single word" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Theory" />
+            <option value="$PROJECT_DIR$/01. Scanning the input/Understanding System.in" />
+            <option value="$PROJECT_DIR$/02. Arithmetic operations/Determine the result" />
+            <option value="$PROJECT_DIR$/02. Arithmetic operations/Expression result" />
+            <option value="$PROJECT_DIR$/02. Arithmetic operations/Find 12" />
+            <option value="$PROJECT_DIR$/02. Arithmetic operations/How to change the order of an expression" />
+            <option value="$PROJECT_DIR$/02. Arithmetic operations/The result of the expression" />
+            <option value="$PROJECT_DIR$/02. Arithmetic operations/Theory" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/AND and OR" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/Check options" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/Choose bitwisely" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/Existing operators" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/Inverting digits" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/Theory" />
+            <option value="$PROJECT_DIR$/03. Bitwise and bit-shift operations/What is n" />
+            <option value="$PROJECT_DIR$/04. Logical operations/Boolean value" />
+            <option value="$PROJECT_DIR$/04. Logical operations/Declaring boolean variables" />
+            <option value="$PROJECT_DIR$/04. Logical operations/Logical operations" />
+            <option value="$PROJECT_DIR$/04. Logical operations/Theory" />
+            <option value="$PROJECT_DIR$/04. Logical operations/True result" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Boys in a sport class" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Check the given numbers are different" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Check the sum" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Check the value" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Determine the result" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Exactly one parameter is positive" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Existing operators" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Groundhogs at a party" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Is between" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Job offer" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Possible values of a variable" />
+            <option value="$PROJECT_DIR$/05. Relational operators/The result is true" />
+            <option value="$PROJECT_DIR$/05. Relational operators/Theory" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/+Infinity as a result" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/-Infinity as a result" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/Infinity or not" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/Maximum values" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/NaN as a result" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/Subtracting infinity" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/Theory" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/These infinities" />
+            <option value="$PROJECT_DIR$/06. Infinity and Not a Number/Zero division" />
+            <option value="$PROJECT_DIR$/07. Increment and decrement/Decrement all" />
+            <option value="$PROJECT_DIR$/07. Increment and decrement/Increasing a variable by one" />
+            <option value="$PROJECT_DIR$/07. Increment and decrement/Remainder of division" />
+            <option value="$PROJECT_DIR$/07. Increment and decrement/Theory" />
+            <option value="$PROJECT_DIR$/07. Increment and decrement/What is the result" />
+            <option value="$PROJECT_DIR$/07. Increment and decrement/What is the result 2" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

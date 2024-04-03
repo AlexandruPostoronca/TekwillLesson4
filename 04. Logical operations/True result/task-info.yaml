@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: '!b1 && b2'
+    is_correct: false
+  - text: b1 && b2
+    is_correct: false
+  - text: b1 ^ b2
+    is_correct: true
+  - text: b1 || b2
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 08 Mar 2024 20:53:26 UTC"
+record: -1
+selected_options:
+  - 2
+  - 3
+custom_name: True result
+local_check: true

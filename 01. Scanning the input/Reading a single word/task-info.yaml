@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: scanner.nextWord()
+    is_correct: false
+  - text: scanner.nextLine()
+    is_correct: false
+  - text: scanner.next()
+    is_correct: true
+  - text: scanner.nextString()
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      package src;
+      
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 16:25:30 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: Reading a single word
+local_check: true

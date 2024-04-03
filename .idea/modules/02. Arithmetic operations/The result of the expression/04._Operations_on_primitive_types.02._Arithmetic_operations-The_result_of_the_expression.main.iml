@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":02._Arithmetic_operations-The_result_of_the_expression:main" external.linked.project.path="$MODULE_DIR$/../../../../02. Arithmetic operations/The result of the expression" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="04._Operations_on_primitive_types" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../02. Arithmetic operations/The result of the expression/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../02. Arithmetic operations/The result of the expression/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../02. Arithmetic operations/The result of the expression/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="04._Operations_on_primitive_types.util.main" />
+  </component>
+</module>

@@ -1,0 +1,36 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: '>>>'
+    is_correct: false
+  - text: ^
+    is_correct: false
+  - text: '!'
+    is_correct: false
+  - text: "~"
+    is_correct: true
+  - text: <<
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            int n1 = 7;
+            int n2 = 1;
+      
+            int result = n1 & n2;
+            System.out.println(result);
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 18:24:51 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: Inverting digits
+local_check: true

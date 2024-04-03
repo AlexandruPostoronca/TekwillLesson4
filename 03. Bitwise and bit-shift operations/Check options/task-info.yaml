@@ -1,0 +1,34 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: 1 | 4
+    is_correct: true
+  - text: 1 & 4
+    is_correct: false
+  - text: 1 ^ 4
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            int n1 = 7;
+            int n2 = 1;
+      
+            int result = n1 & n2;
+            System.out.println(result);
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 Mar 2024 18:12:55 UTC"
+record: -1
+selected_options:
+  - 0
+  - 2
+custom_name: Check options
+local_check: true

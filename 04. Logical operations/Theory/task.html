@@ -1,0 +1,111 @@
+<h2>Boolean and logical operations</h2>
+
+<h4>Boolean type</h4>
+<p>
+    The <code>boolean</code> is a data type that has only two possible values: <code>false</code> and <code>true</code>.
+    This is also known as the <strong>logical type</strong>.
+</p>
+
+<p>
+    This type is a common way in programming languages to represent something that has only two opposite states like
+    <em>on</em> or <em>off</em>, <em>yes</em> or <em>no</em>, etc.
+</p>
+<img alt="" src="https://ucarecdn.com/50cbf6b2-6d44-44d6-b5ef-b1426bdde305/" width="160" style="margin: auto">
+<p>
+    If you are writing an application that keeps track of opening and closing a door you'll find it natural to use
+    <code>boolean</code> to store the current door state.
+</p>
+<pre><code>boolean open = true;
+boolean closed = false;
+
+System.out.println(open);   // true
+System.out.println(closed); // false</code>
+</pre>
+
+<div class="alert alert-warning">
+    Important, you cannot assign an integer value to a <code>boolean</code> variable. In Java, 0 is not the same as
+    <code>false</code>.
+</div>
+
+<h4>Logical operators</h4>
+
+<p>Variables of the <code>boolean</code> type are often used to build logical expressions using logical operators. Java
+    has four logical operators <strong>NOT</strong>,<strong>AND</strong>, <strong>OR</strong> and <strong>XOR:</strong>
+</p>
+
+<ul>
+    <li>
+        <strong>NOT</strong> is a unary operator that reverses the boolean value. It is denoted as <code>!</code>.
+        <pre><code>boolean f = false; // f is false
+boolean t = !f;    // t is true</code></pre>
+    </li>
+    <li>
+        <strong>AND</strong> is a binary operator that returns <code>true</code> if both operands are <code>true</code>,
+        otherwise, it returns <code>false</code>. It is denoted as <code>&amp;&amp;</code>.
+        <pre><code>boolean b1 = false && false; // false
+boolean b2 = false && true;  // false
+boolean b3 = true && false;  // false
+boolean b4 = true && true;   // true </code></pre>
+    </li>
+    <li>
+        <strong>OR</strong> is a binary operator that returns <code>true</code> if at least one operand is
+        <code>true</code>, otherwise, it returns <code>false</code>. It is denoted as <code>||</code>.
+        <pre><code>boolean b1 = false || false; // false
+boolean b2 = false || true;  // true
+boolean b3 = true || false;  // true
+boolean b4 = true || true;   // true</code></pre>
+    </li>
+    <li>
+        <strong>XOR</strong> (<strong>exclusive OR</strong>) is a binary operator that returns <code>true</code> if
+        boolean operands have different values, otherwise, it returns <code>false</code>. It is denoted as
+        <code>^</code>.
+        <pre><code>boolean b1 = false ^ false; // false
+boolean b2 = false ^ true;  // true
+boolean b3 = true ^ false;  // true
+boolean b4 = true ^ true;   // false</code></pre>
+    </li>
+</ul>
+<p>The <strong>XOR</strong> operator is used less often than the others. Just remember that Java has it. If you really
+    need it, you can use it.</p>
+
+<h4>The precedence of logical operators</h4>
+<p>Here are the logical operations sorted in order of decreasing priorities in expressions: <code>!</code> (NOT), <code>^</code>
+    (XOR), <code>&amp;&amp;</code> (AND), <code>||</code> (OR).</p>
+<p>So, the following variable is <code>true</code>:</p>
+<code>boolean b = true && !false; // true, because !false is evaluated first</code>
+<p>To change the order of execution you can use round brackets <code>(...)</code>.</p>
+
+
+<h4>An example: trekking</h4>
+<p>As an example, let's write a complex boolean expression that determines the possibility of trekking in summer and in
+    other seasons. Let's suppose that the right conditions for trekking are warm dry weather in summer and autumn.</p>
+
+<pre><code>boolean cold = false;
+boolean dry = true;
+boolean summer = false; // suppose now is autumn
+
+boolean trekking = dry && (!cold || summer); // true, let's go to trek!</code>
+</pre>
+
+<p>Do not get confused in the expression above, otherwise, you will go trek in bad weather! A programmer should
+    understand not only arithmetic but also logical operations.</p>
+
+<h4>Short-circuiting evaluation</h4>
+<p>An interesting thing is that the <code>&amp;&amp;</code>and <code>||</code> operators don't evaluate the second
+    argument if it isn't necessary. When the first argument of the <code>&amp;&amp;</code> operator evaluates to
+    <code>false</code>, the overall value must be <code>false</code>; and when the first argument of the <code>||</code>
+    operator evaluates to <code>true</code>, the overall value must be <code>true</code>. So:</p>
+
+<ul>
+    <li><code>false &amp;&amp; ...</code> -&gt; <code>false</code>,
+        since it is not necessary to know what the right-hand side is;
+    </li>
+    <li><code>true || ...</code> -&gt; <code>true</code>, since it is
+        not necessary to know what the right-hand side is.
+    </li>
+</ul>
+
+<p>This behavior is known as <strong>short-circuit evaluation</strong> (do not confuse it with
+    <a href="https://en.wikipedia.org/wiki/Short_circuit" rel="noopener noreferrer nofollow" target="_blank">an
+        electrical short circuit</a>). It reduces the computation time, but can also be used to avoid some errors in
+    programs. We will discuss this in the following topics.</p>

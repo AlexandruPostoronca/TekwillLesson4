@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: A regular value
+    is_correct: false
+  - text: +Infinity
+    is_correct: true
+  - text: -Infinity
+    is_correct: false
+  - text: NaN
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 09 Mar 2024 23:11:11 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Maximum values
+local_check: true
